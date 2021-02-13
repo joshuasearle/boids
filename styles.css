@@ -1,0 +1,78 @@
+* {
+  font-family: monospace;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+  color: white;
+}
+
+header {
+  padding: 1em;
+  background-color: #5e004e;
+}
+
+.arena {
+  background-color: #11001a;
+  height: 70vh;
+  position: relative;
+}
+
+.options {
+  margin: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.slider-option {
+  width: 10em;
+  margin: 1em;
+}
+
+.selected {
+  background-color: #888888;
+}
+
+.btn {
+  padding: 1em;
+  margin: 0 1em;
+}
+
+.adders {
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.boid {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 25px solid #4379a5;
+  margin: 0;
+  padding: 0;
+}
+
+.droid {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 40px solid #c55b8d;
+  margin: 0;
+  padding: 0;
+}
+
+.barrier {
+  position: absolute;
+  background-color: #5004ee;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
