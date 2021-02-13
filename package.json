@@ -2,9 +2,10 @@
   "name": "boids-base",
   "version": "1.0.0",
   "description": "Boids, created by Craig Reynolds, are a form of artificial life that simulate the behaviour of birds, fish, and other flocking animals.\r The behaviour of the boids is determined by three simple rules:",
-  "main": "script.js",
+  "main": "index.html",
+  "homepage": "https://joshuasearle.github.io/boids",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
