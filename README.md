@@ -1,5 +1,7 @@
 # Boids! - Flocking Simulator
 
+Test out the simulator [here](https://joshuasearle.github.io/boids/).
+
 Boids, created by Craig Reynolds, are a form of artificial life that simulate the behaviour of birds, fish, and other flocking animals.
 The behaviour of the boids is determined by three simple rules:
 
@@ -14,4 +16,4 @@ I have added a few more extra rules to make it more interesting:
 - Random noise
 - Predator boids, called droids, that the other boids try to avoid, while the droids to chase
 
-Read more on the wikipedia article [here](https://en.wikipedia.org/wiki/Boids)
+Read more on the wikipedia article [here](https://en.wikipedia.org/wiki/Boids).
