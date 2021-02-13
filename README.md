@@ -13,3 +13,5 @@ I have added a few more extra rules to make it more interesting:
 - Barrier avoidance
 - Random noise
 - Predator boids, called droids, that the other boids try to avoid, while the droids to chase
+
+Read more on the wikipedia article [here](https://en.wikipedia.org/wiki/Boids)
