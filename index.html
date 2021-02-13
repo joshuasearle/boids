@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boids!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header><h1 class="title">Boids! - Flocking Simulator</h1></header>
+    <div class="arena"></div>
+    <div class="adders">
+      <button id="boid-adder" class="btn selected">Add Boids</button>
+      <button id="boid-adder10" class="btn">Add Boids x10</button>
+      <button id="barrier-adder" class="btn">Add Barriers</button>
+      <button id="droid-adder" class="btn">Add Droids</button>
+    </div>
+    <div class="options">
+      <div class="slider-option">
+        <label for="separation">separation</label>
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="50"
+          class="slider"
+          id="separation"
+        />
+      </div>
+      <div class="slider-option">
+        <label for="alignment">alignment</label>
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="50"
+          class="slider"
+          id="alignment"
+        />
+      </div>
+      <div class="slider-option">
+        <label for="cohesion">cohesion</label>
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="50"
+          class="slider"
+          id="cohesion"
+        />
+      </div>
+      <div class="slider-option">
+        <label for="vision">vision</label>
+        <input
+          type="range"
+          min="30"
+          max="130"
+          value="80"
+          class="slider"
+          id="vision"
+        />
+      </div>
+      <div class="slider-option">
+        <label for="noise">noise</label>
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="50"
+          class="slider"
+          id="noise"
+        />
+      </div>
+      <div class="slider-option">
+        <label for="speed">speed</label>
+        <input
+          type="range"
+          min="5"
+          max="30"
+          value="15"
+          class="slider"
+          id="speed"
+        />
+      </div>
+    </div>
+  </body>
+</html>
