@@ -70,7 +70,7 @@ boid10Adder.addEventListener('click', () => {
   droidAdder.classList.remove('selected');
 });
 
-arena.addEventListener('click', e => {
+arena.addEventListener('click', (e) => {
   if (!boidAddingMode) return;
   boids.push(
     new Boid(
@@ -80,7 +80,7 @@ arena.addEventListener('click', e => {
   );
 });
 
-arena.addEventListener('click', e => {
+arena.addEventListener('click', (e) => {
   if (!boidAdding10Mode) return;
   for (let i = 0; i < 10; i++) {
     boids.push(
@@ -92,7 +92,7 @@ arena.addEventListener('click', e => {
   }
 });
 
-arena.addEventListener('click', e => {
+arena.addEventListener('click', (e) => {
   if (!driodAddingMode) return;
   droids.push(
     new Droid(
@@ -102,7 +102,7 @@ arena.addEventListener('click', e => {
   );
 });
 
-arena.addEventListener('click', e => {
+arena.addEventListener('click', (e) => {
   if (!barrierAddingMode) return;
   const x = +e.clientX;
   const y = +e.clientY - header.offsetHeight;
@@ -114,27 +114,27 @@ arena.addEventListener('click', e => {
   barrierDiv.style.top = `${y}px`;
 });
 
-document.getElementById('vision').addEventListener('input', e => {
+document.getElementById('vision').addEventListener('input', (e) => {
   vision = e.target.value;
 });
 
-document.getElementById('noise').addEventListener('input', e => {
+document.getElementById('noise').addEventListener('input', (e) => {
   noise = (e.target.value / 100) * defaultNoise;
 });
 
-document.getElementById('speed').addEventListener('input', e => {
+document.getElementById('speed').addEventListener('input', (e) => {
   maxSpeed = e.target.value;
 });
 
-document.getElementById('separation').addEventListener('input', e => {
+document.getElementById('separation').addEventListener('input', (e) => {
   separationFactor = e.target.value;
 });
 
-document.getElementById('alignment').addEventListener('input', e => {
+document.getElementById('alignment').addEventListener('input', (e) => {
   alignmentFactor = e.target.value;
 });
 
-document.getElementById('cohesion').addEventListener('input', e => {
+document.getElementById('cohesion').addEventListener('input', (e) => {
   cohesionFactor = e.target.value;
 });
 
@@ -163,7 +163,7 @@ const getArenaHeight = () => {
 };
 
 // Rules
-const avoidWalls = boid => {
+const avoidWalls = (boid) => {
   const vector = new Vector(0, 0);
   const avoidanceFactor = 50;
 
@@ -357,7 +357,7 @@ class Mover {
   }
 
   nearBoids(boids) {
-    return boids.filter(otherBoid => {
+    return boids.filter((otherBoid) => {
       if (otherBoid.id === this.id) return false;
       const dist = Vector.dist(this.pos, otherBoid.pos);
       return dist <= vision * this.visionMultiplier;
@@ -365,7 +365,7 @@ class Mover {
   }
 
   nearDroids(droids) {
-    return droids.filter(droid => {
+    return droids.filter((droid) => {
       if (droid.id === this.id) return false;
       const dist = Vector.dist(this.pos, droid.pos);
       return dist <= vision * this.visionMultiplier;
@@ -373,7 +373,7 @@ class Mover {
   }
 
   nearBarriers(barriers) {
-    return barriers.filter(barrier => {
+    return barriers.filter((barrier) => {
       const dist = Vector.dist(this.pos, barrier);
       return dist <= vision * this.visionMultiplier;
     });
@@ -490,7 +490,7 @@ class Droid extends Mover {
   }
 }
 
-const createBoidDiv = id => {
+const createBoidDiv = (id) => {
   const boidDiv = document.createElement('div');
   boidDiv.classList.add('boid');
   boidDiv.id = id;
@@ -498,7 +498,7 @@ const createBoidDiv = id => {
   return boidDiv;
 };
 
-const createDroidDiv = id => {
+const createDroidDiv = (id) => {
   const droidDiv = document.createElement('div');
   droidDiv.classList.add('droid');
   droidDiv.id = id;
@@ -507,13 +507,13 @@ const createDroidDiv = id => {
 };
 
 const renderBoids = () => {
-  boids.forEach(boid => boid.render());
-  droids.forEach(droid => droid.render());
+  boids.forEach((boid) => boid.render());
+  droids.forEach((droid) => droid.render());
 };
 
 const moveBoids = () => {
-  boids.forEach(boid => boid.move());
-  droids.forEach(droid => droid.move());
+  boids.forEach((boid) => boid.move());
+  droids.forEach((droid) => droid.move());
 };
 
 // Main function

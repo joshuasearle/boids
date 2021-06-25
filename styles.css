@@ -1,7 +1,13 @@
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: monospace;
   box-sizing: border-box;
   margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+html {
+  overflow-y: scroll;
 }
 
 .title {
@@ -20,8 +26,8 @@ footer {
 }
 
 footer {
-  padding: 0.5em;
-  position: fixed;
+  padding: 0.8em;
+  /* position: fixed; */
   bottom: 0;
   width: 100%;
   display: flex;
@@ -42,43 +48,37 @@ footer p {
 }
 
 .options {
+  padding: 1em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #5e004e;
 }
 
 .slider-option {
+  color: white;
   width: 10em;
   margin: 1em;
-  text-align: center;
-  font-size: 1.1rem;
-}
-
-.slider-option label {
-  display: block;
 }
 
 .selected {
-  background-color: #11001a !important;
-}
-
-button:focus {
-  outline: 0;
+  background-color: #11001a;
+  color: white;
 }
 
 .btn {
   padding: 1em;
   margin: 0 1em;
-  background-color: #5e004e;
+  outline: none;
   border: none;
-  color: white;
-  font-size: 1.1rem;
+  cursor: pointer;
 }
 
 .adders {
-  padding-top: 1em;
+  padding: 1em;
   display: flex;
   justify-content: center;
+  background-color: #5e004e;
 }
 
 .boid {
@@ -109,14 +109,4 @@ button:focus {
   border-radius: 50%;
   height: 20px;
   width: 20px;
-}
-
-html {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #5004ee;
-  color: white;
-}
-
-.container {
-  padding-bottom: 3em;
 }
